@@ -6,13 +6,13 @@
 
 
     <!--  自动装配  -->
-    <!--    <context-param>-->
-    <!--        <param-name>contextConfigLocation</param-name>-->
-    <!--        <param-value>classpath:spring-context*.xml</param-value>-->
-    <!--    </context-param>-->
-    <!--    <listener>-->
-    <!--        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>-->
-    <!--    </listener>-->
+        <context-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring-context*.xml</param-value>
+        </context-param>
+        <listener>
+            <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+        </listener>
 
     <!--servlet-->
     <servlet>
@@ -25,7 +25,14 @@
     </servlet-mapping>
 
 
-
+    <servlet>
+        <servlet-name>autoUserController</servlet-name>
+        <servlet-class>com.coderfocus.controller.AutoUserController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>autoUserController</servlet-name>
+        <url-pattern>/autoUser</url-pattern>
+    </servlet-mapping>
 
 
 
